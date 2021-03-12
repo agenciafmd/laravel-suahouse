@@ -3,8 +3,8 @@
         var param = {
             event: param.event || 'form',
             form_name: param.form_name || 'formulário',
-            code: param.code || 0000,
-            id: param.id || 0000,
+            code: param.code || '0000',
+            id: param.id || '0000',
             product: param.product || 'Nenhum',
             name: param.name || 'John Doe',
             email: param.email || 'john.doe@email.com',
@@ -19,12 +19,11 @@
             param.ddd,
             param.phone,
         );
-        console.log('1');
+
         callback(param, response);
     };
 
     function pushToDatalayer(param, response) {
-        console.log('2');
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
             event: param.event,
@@ -40,7 +39,7 @@
     });
 
     @if(session()->has('suahouse'))
-        var param = {
+        let param = {
             @foreach(session('suahouse') as $param => $value)
                 {{ $param }}: '{{ $value }}',
             @endforeach
