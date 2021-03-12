@@ -1,0 +1,32 @@
+{
+    "name": "agenciafmd/laravel-suahouse",
+    "description": "Integração com a Suahouse",
+    "homepage": "https://github.com/agenciafmd/laravel-suahouse",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Irineu Junior",
+            "email": "irineu@fmd.ag",
+            "homepage": "https://fmd.ag/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "laravel/framework": "6.*|7.*|8.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Agenciafmd\\Suahouse\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Agenciafmd\\Suahouse\\Providers\\SuahouseServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
