@@ -21,6 +21,14 @@ Este dado, é consigo quando o cliente passa o acesso ao painel administrativo.
 SUAHOUSE_DOMAIN=subdominio-do-cliente.housecrm.com.br
 ```
 
+Por padrão, o chat virá desabilitado.
+
+Para habilitar, insira a cor (red|blue) no .env
+
+```dotenv
+SUAHOUSE_CHAT=blue
+```
+
 Vamos adicionar os components da suahouse na nossa `master.blade.php`
 
 ```html
