@@ -48,7 +48,7 @@ class BladeServiceProvider extends ServiceProvider
     protected function publish()
     {
         $this->publishes([
-            __DIR__ . '/../resources/views' => base_path('resources/views/vendor/agenciafmd/suahouse'),
+            __DIR__ . '/../resources/views' => base_path('resources/views/vendor/suahouse'),
         ], 'laravel-suahouse:views');
     }
 }
