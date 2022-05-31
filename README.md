@@ -60,6 +60,7 @@ $this->emit('suahouse', [
     'email' => $data['email'],
     'ddd' => substr(preg_replace('/[^0-9]/', '', $data['phone']), 0, 2),
     'phone' => substr(preg_replace('/[^0-9]/', '', $data['phone']), 2),
+    'description' => $data['message']
 ]);
 ```
 
@@ -79,5 +80,6 @@ session()->flash('suahouse', [
     'email' => $data['email'],
     'ddd' => substr(preg_replace('/[^0-9]/', '', $data['phone']), 0, 2),
     'phone' => substr(preg_replace('/[^0-9]/', '', $data['phone']), 2),
+    'description' => $data['message']
 ]);
 ```

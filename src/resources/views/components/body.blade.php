@@ -11,6 +11,12 @@
             email: param.email || 'john.doe@email.com',
             ddd: param.ddd || '00',
             phone: param.phone || '999999999',
+            description: param.description || '',
+            filial_code: param.filial_code || '',
+            information: param.information || '',
+            campaign: param.campaign || '',
+            cpf: param.cpf || '',
+
         };
 
         let response = hc_envia_mensagem(
@@ -19,6 +25,11 @@
             param.email,
             param.ddd,
             param.phone,
+            param.description,
+            param.filial_code,
+            param.information,
+            param.campaign,
+            param.cpf
         );
 
         callback(param, response);
@@ -46,7 +57,6 @@
                 {{ $param }}: '{{ $value }}',
             @endforeach
         };
-
         sendToSuaHouse(param, pushToDatalayer);
     @endif
 </script>
