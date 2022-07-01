@@ -11,6 +11,7 @@
             email: param.email || 'john.doe@email.com',
             ddd: param.ddd || '00',
             phone: param.phone || '999999999',
+            telephone: param.telephone || '(00) 99999-9999',
             description: param.description || '',
             filial_code: param.filial_code || '',
             information: param.information || '',
@@ -43,6 +44,9 @@
             form_id: param.form_id,
             product_id: param.id,
             product: param.product,
+            name: param.name || '',
+            email: param.email || '',
+            phone: param.telephone || '',
             lead_id: response.retorno,
         });
     }
@@ -52,11 +56,11 @@
     });
 
     @if(session()->has('suahouse'))
-        let param = {
-            @foreach(session('suahouse') as $param => $value)
+    let param = {
+        @foreach(session('suahouse') as $param => $value)
                 {{ $param }}: '{{ $value }}',
-            @endforeach
-        };
-        sendToSuaHouse(param, pushToDatalayer);
+        @endforeach
+    };
+    sendToSuaHouse(param, pushToDatalayer);
     @endif
 </script>
